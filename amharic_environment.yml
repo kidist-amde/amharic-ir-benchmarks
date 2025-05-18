@@ -1,0 +1,45 @@
+name: amharic_environment
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip  # Installed once here
+  - faiss-cpu  # Installed via Conda for stability
+  - pytorch  # Installed via Conda
+  - pip:
+      - accelerate==1.3.0
+      - aiohttp==3.11.9
+      - anyio==4.8.0
+      - beautifulsoup4==4.13.3
+      - bm25s==0.2.7.post1
+      - certifi==2024.8.30
+      - click==8.1.7
+      - datasets==3.1.0
+      - dill==0.3.8
+      - Flask==3.1.0
+      - huggingface-hub==0.26.3
+      - jinja2==3.1.4
+      - joblib==1.4.2
+      - langchain==0.0.266
+      - matplotlib==3.9.4
+      - nltk==3.9.1
+      - numpy==1.26.4
+      - openai==1.61.0
+      - pandas==2.2.3
+      - pillow==11.1.0
+      - protobuf==5.29.3
+      - pytorch-lightning==2.5.0.post0
+      - regex==2024.11.6
+      - requests==2.32.3
+      - safetensors==0.4.5
+      - scikit-learn==1.6.1
+      - scipy==1.13.1
+      - seaborn==0.13.2
+      - sentencepiece==0.2.0
+      - torchmetrics==1.6.1
+      - tqdm==4.67.1
+      - transformers==4.47.0
+      - trec-car-tools==2.6
+      - ujson==5.10.0
+      - urllib3==1.26.20

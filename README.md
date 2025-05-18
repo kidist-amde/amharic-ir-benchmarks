@@ -108,7 +108,7 @@ If you use this repository, please cite our ACL 2025 Findings paper:
 ```bibtex
 @inproceedings{mekonnen2025amharic,
   title={Optimized Text Embedding Models and Benchmarks for Amharic Passage Retrieval},
-  author={Mekonnen, Kidist Amde and Yates, Andrew and de Rijke, Maarten},
+  author={Kidist Amde Mekonnen, Yosef Worku Alemneh, Maarten de Rijke },
   booktitle={Findings of ACL},
   year={2025}
 }

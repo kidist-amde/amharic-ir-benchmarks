@@ -8,14 +8,21 @@
 This repository accompanies our ACL 2025 Findings paper:
 **"Optimized Text Embedding Models and Benchmarks for Amharic Passage Retrieval"**
 
-We provide a reproducible benchmark suite for Amharic information retrieval, including:
+✨  We provide a reproducible benchmark suite for Amharic information retrieval, including:
 
 * BM25 sparse baseline
-* Dense embedding models (RoBERTa / BERT for Amharic)
+* Dense embedding models (RoBERTa / BERT variants fine-tuned for Amharic)
+
 * ColBERT-AM (late interaction retriever)
 
 ---
-
+## 👐 Features
+-  **Pretrained Amharic Retrieval Models** Includes ( RoBERTa-Base-Amharic-Embd, RoBERTa-Medium-Amharic-Embd, BERT-Medium-Amharic-Embd, and ColBERT-AM for dense retrieval.)
+-  **Hugging Face model & dataset links for easy access**
+-  **Training, evaluation, and inference scripts for reproducibility**
+-  **Benchmarks BM25 (sparse retrieval), bi-encoder dense retrieval, and ColBERT (late interaction retrieval) for Amharic.**
+-  **MS MARCO-style dataset conversion script & direct dataset links**
+---
 ## 📁 Repository Structure
 
 ```

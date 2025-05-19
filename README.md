@@ -95,17 +95,45 @@ bash scripts/retrieve_colbert.sh
 
 ---
 
-## 📊 Benchmark Results
+## 📊 Amharic News: Dense Retrieval Benchmark
 
-| Model                     | MRR\@10 | Recall\@10 | Recall\@100 |
-| ------------------------- | ------- | ---------- | ----------- |
-| BM25                      | 0.657   | 0.774      | 0.871       |
-| ColBERT-AM                | 0.754   | 0.858      | 0.931       |
-| RoBERTa-Base-Amharic-Embd | 0.755   | 0.897      | 0.971       |
-| RoBERTa-Medium-Amharic    | 0.707   | 0.861      | 0.963       |
+This table presents the performance of **Amharic-optimized** vs **multilingual** dense retrieval models on the **Amharic News dataset**, using a **bi-encoder** architecture. We report **MRR\@10**, **NDCG\@10**, and **Recall\@10/50/100**. Best scores are in **bold**, and † indicates statistically significant improvements *(p < 0.05)* over the strongest multilingual baseline.
 
-Our Amharic-specific dense retrievers consistently outperform multilingual baselines from the MTEB leaderboard.
+| Model                               | Params | MRR\@10    | NDCG\@10   | Recall\@10 | Recall\@50 | Recall\@100 |
+| ----------------------------------- | ------ | ---------- | ---------- | ---------- | ---------- | ----------- |
+| **Multilingual models**             |        |            |            |            |            |             |
+| gte-modernbert-base                 | 149M   | 0.019      | 0.022      | 0.030      | 0.054      | 0.065       |
+| gte-multilingual-base               | 305M   | 0.649      | 0.684      | 0.794      | 0.876      | 0.904       |
+| multilingual-e5-large-instruct      | 560M   | 0.713      | 0.747      | 0.853      | 0.924      | 0.946       |
+| snowflake-arctic-embed-l-v2.0       | 568M   | 0.719      | 0.755      | 0.868      | 0.941      | 0.957       |
+| **Ours (Amharic-optimized models)** |        |            |            |            |            |             |
+| BERT-Medium-Amharic-embed           | 40M    | 0.657      | 0.696      | 0.817      | 0.916      | 0.945       |
+| RoBERTa-Medium-Amharic-embed        | 42M    | 0.707      | 0.744      | 0.861      | 0.941      | 0.963       |
+| **RoBERTa-Base-Amharic-embed**      | 110M   | **0.755†** | **0.790†** | **0.897†** | **0.957†** | **0.971†**  |
 
+---
+
+> 📖 **For further details on the baselines, see:**
+> **Yu et al., 2024** — *Multilingual-E5*
+> **Wang et al., 2024** — *Snowflake Arctic Embed*
+
+---
+
+## 📊  Amharic News: Sparse vs Dense Retrieval Comparison
+
+The following table compares **sparse** and **dense** retrieval models trained on the Amharic News dataset. ColBERT-AM uses RoBERTa-Medium-Amharic as its backbone. Metrics reported include **MRR\@10**, **NDCG\@10**, and **Recall\@10/50/100**. Best results are shown in **bold**, and † marks statistically significant improvements *(p < 0.05)*.
+
+| Type             | Model                          | MRR\@10    | NDCG\@10   | Recall\@10 | Recall\@50 | Recall\@100 |
+| ---------------- | ------------------------------ | ---------- | ---------- | ---------- | ---------- | ----------- |
+| Sparse retrieval | BM25-AM                        | 0.657      | 0.682      | 0.774      | 0.847      | 0.871       |
+| Dense retrieval  | ColBERT-AM                     | 0.754      | 0.777      | 0.858      | 0.917      | 0.931       |
+| Dense retrieval  | **RoBERTa-Base-Amharic-embed** | **0.755**† | **0.790**† | **0.897**† | **0.957**† | **0.971**†  |
+
+---
+
+> 📌 **Note:**
+> * RoBERTa-Base-Amharic-embed achieves statistically significant improvements over ColBERT-AM across all metrics. Evaluation was performed using a paired t-test.
+> * **For experiments on the 2AIRTC dataset**, please refer to the **Appendix section** of our [paper](#).
 ---
 
 ## 📄 Citation
@@ -132,3 +160,8 @@ Please [open an issue](https://github.com/kidist-amde/amharic-ir-benchmarks/issu
 ## 📜 License
 
 This project is licensed under the [Apache 2.0 License](LICENSE).
+
+## 🙏 Acknowledgments
+
+This project builds on the [ColBERT repository](https://github.com/stanford-futuredata/ColBERT) by Stanford FutureData Lab. We sincerely thank the authors for open-sourcing their work, which served as a strong foundation for our Amharic ColBERT implementation and experiments.
+

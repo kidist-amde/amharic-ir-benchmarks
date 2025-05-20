@@ -3,7 +3,7 @@
 [![ACL 2025 Findings](https://img.shields.io/badge/Paper-ACL%202025%20Findings-b31b1b)](https://aclanthology.org/)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-green.svg)](LICENSE)
 [![Models on HF](https://img.shields.io/badge/Models-HuggingFace-blueviolet)](https://huggingface.co/collections/rasyosef/amharic-text-embedding-models-679cb55eae1d498e3ac5bdc5)
-[![Dataset on HF](https://img.shields.io/badge/Dataset-HuggingFace-ff69b4)](https://huggingface.co/datasets/rasyosef/amharic-passage-retrieval-dataset)
+[![Dataset on HF](https://img.shields.io/badge/Dataset-HuggingFace-ff69b4)](https://huggingface.co/datasets/rasyosef/amharic-news-retrieval-dataset)
 
 This repository accompanies our ACL 2025 Findings paper:
 **"Optimized Text Embedding Models and Benchmarks for Amharic Passage Retrieval"**
@@ -99,17 +99,20 @@ bash scripts/retrieve_colbert.sh
 
 This table presents the performance of **Amharic-optimized** vs **multilingual** dense retrieval models on the **Amharic News dataset**, using a **bi-encoder** architecture. We report **MRR\@10**, **NDCG\@10**, and **Recall\@10/50/100**. Best scores are in **bold**, and † indicates statistically significant improvements *(p < 0.05)* over the strongest multilingual baseline.
 
-| Model                               | Params | MRR\@10    | NDCG\@10   | Recall\@10 | Recall\@50 | Recall\@100 |
-| ----------------------------------- | ------ | ---------- | ---------- | ---------- | ---------- | ----------- |
-| **Multilingual models**             |        |            |            |            |            |             |
-| gte-modernbert-base                 | 149M   | 0.019      | 0.022      | 0.030      | 0.054      | 0.065       |
-| gte-multilingual-base               | 305M   | 0.649      | 0.684      | 0.794      | 0.876      | 0.904       |
-| multilingual-e5-large-instruct      | 560M   | 0.713      | 0.747      | 0.853      | 0.924      | 0.946       |
-| snowflake-arctic-embed-l-v2.0       | 568M   | 0.719      | 0.755      | 0.868      | 0.941      | 0.957       |
-| **Ours (Amharic-optimized models)** |        |            |            |            |            |             |
-| BERT-Medium-Amharic-embed           | 40M    | 0.657      | 0.696      | 0.817      | 0.916      | 0.945       |
-| RoBERTa-Medium-Amharic-embed        | 42M    | 0.707      | 0.744      | 0.861      | 0.941      | 0.963       |
-| **RoBERTa-Base-Amharic-embed**      | 110M   | **0.755†** | **0.790†** | **0.897†** | **0.957†** | **0.971†**  |
+## 📊 Benchmark Results
+
+| Model                                 | Params | MRR@10    | NDCG@10   | Recall@10 | Recall@50 | Recall@100 |
+|---------------------------------------|--------|-----------|-----------|-----------|-----------|------------|
+| *Multilingual models*                 |        |           |           |           |           |            |
+| gte-modernbert-base                   | 149M   | 0.019     | 0.023     | 0.033     | 0.051     | 0.067      |
+| gte-multilingual-base                 | 305M   | 0.600     | 0.638     | 0.760     | 0.851     | 0.882      |
+| multilingual-e5-large-instruct        | 560M   | 0.672     | 0.709     | 0.825     | 0.911     | 0.931      |
+| snowflake-arctic-embed-l-v2.0         | 568M   | 0.659     | 0.701     | 0.831     | 0.922     | 0.942      |
+| *Ours (Amharic-optimized models)*     |        |           |           |           |           |            |
+| BERT-Medium-Amharic-embed             | 40M    | 0.682     | 0.720     | 0.843     | 0.931     | 0.954      |
+| RoBERTa-Medium-Amharic-embed          | 42M    | 0.735     | 0.771     | 0.884     | 0.955     | 0.971      |
+| **RoBERTa-Base-Amharic-embed**        | 110M   | **0.775↑** | **0.808↑** | **0.913↑** | **0.964↑** | **0.979↑** |
+
 
 ---
 
@@ -123,11 +126,14 @@ This table presents the performance of **Amharic-optimized** vs **multilingual**
 
 The following table compares **sparse** and **dense** retrieval models trained on the Amharic News dataset. ColBERT-AM uses RoBERTa-Medium-Amharic as its backbone. Metrics reported include **MRR\@10**, **NDCG\@10**, and **Recall\@10/50/100**. Best results are shown in **bold**, and † marks statistically significant improvements *(p < 0.05)*.
 
-| Type             | Model                          | MRR\@10    | NDCG\@10   | Recall\@10 | Recall\@50 | Recall\@100 |
-| ---------------- | ------------------------------ | ---------- | ---------- | ---------- | ---------- | ----------- |
-| Sparse retrieval | BM25-AM                        | 0.657      | 0.682      | 0.774      | 0.847      | 0.871       |
-| Dense retrieval  | ColBERT-AM                     | 0.754      | 0.777      | 0.858      | 0.917      | 0.931       |
-| Dense retrieval  | **RoBERTa-Base-Amharic-embed** | **0.755**† | **0.790**† | **0.897**† | **0.957**† | **0.971**†  |
+## 📊 Summary Benchmark Results
+
+| Type             | Model                          | MRR@10    | NDCG@10   | Recall@10 | Recall@50 | Recall@100 |
+|------------------|--------------------------------|-----------|-----------|-----------|-----------|------------|
+| Sparse retrieval | BM25-AM                        | 0.657     | 0.682     | 0.774     | 0.847     | 0.871      |
+| Dense retrieval  | ColBERT-AM                     | 0.754     | 0.777     | 0.858     | 0.917     | 0.931      |
+| Dense retrieval  | **RoBERTa-Base-Amharic-embed** | **0.775↑** | **0.808↑** | **0.913↑** | **0.964↑** | **0.979↑** |
+
 
 ---
 

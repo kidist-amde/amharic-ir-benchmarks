@@ -26,6 +26,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 test_scripts/
+baselines/ColBERT_AM/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

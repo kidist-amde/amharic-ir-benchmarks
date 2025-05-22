@@ -1,0 +1,14 @@
+{ 
+                "lr": 3e-5,
+                "bsize": 32,
+                "accumsteps": 1,
+                "maxsteps": 10000,
+                "query_maxlen": 32,
+                "doc_maxlen": 180,
+                "checkpoint": "rasyosef/bert-medium-amharic",
+                "triples": "bm25_retriever/triplets.jsonl",
+                "collection": "dataset/processed/msmarco-amharic-news_dataset/collection.tsv",
+                "queries": "dataset/processed/msmarco-amharic-news_dataset/queries_train.jsonl",
+                "use_ib_negatives": false
+              }
+              

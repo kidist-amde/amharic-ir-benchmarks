@@ -167,7 +167,7 @@ Please [open an issue](https://github.com/kidist-amde/amharic-ir-benchmarks/issu
 
 This project is licensed under the [Apache 2.0 License](LICENSE).
 
-<!-- ## 🙏 Acknowledgments
+## 🙏 Acknowledgments
 
 This project builds on the [ColBERT repository](https://github.com/stanford-futuredata/ColBERT) by Stanford FutureData Lab. We sincerely thank the authors for open-sourcing their work, which served as a strong foundation for our Amharic ColBERT implementation and experiments.
- -->
+

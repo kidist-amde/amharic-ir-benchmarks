@@ -122,24 +122,24 @@ This table presents the performance of **Amharic-optimized** vs **multilingual**
 
 ---
 
-## 📊  Amharic News: Sparse vs Dense Retrieval Comparison
+## 📊 Amharic News: Sparse vs. Dense Retrieval Comparison
 
-The following table compares **sparse** and **dense** retrieval models trained on the Amharic News dataset. ColBERT-AM uses RoBERTa-Medium-Amharic as its backbone. Metrics reported include **MRR\@10**, **NDCG\@10**, and **Recall\@10/50/100**. Best results are shown in **bold**, and † marks statistically significant improvements *(p < 0.05)*.
+The table below presents a comparison between **sparse** and **dense** retrieval approaches on the **Amharic passage reterival** dataset. While BM25 represents traditional lexical matching, RoBERTa and ColBERT models leverage semantic embeddings optimized for Amharic. All models were trained and evaluated under the same data splits.
 
-## 📊 Summary Benchmark Results
+**ColBERT-RoBERTa-Base-Amharic**, leveraging late interaction with a RoBERTa backbone, delivers the highest retrieval quality across most metrics. Statistically significant gains are marked with ↑ (p < 0.05).
 
-| Type             | Model                          | MRR@10    | NDCG@10   | Recall@10 | Recall@50 | Recall@100 |
-|------------------|--------------------------------|-----------|-----------|-----------|-----------|------------|
-| Sparse retrieval | BM25-AM                        | 0.657     | 0.682     | 0.774     | 0.847     | 0.871      |
-| Dense retrieval  | ColBERT-AM                     | 0.754     | 0.777     | 0.858     | 0.917     | 0.931      |
-| Dense retrieval  | **RoBERTa-Base-Amharic-embed** | **0.775↑** | **0.808↑** | **0.913↑** | **0.964↑** | **0.979↑** |
-
+| Type             | Model                            | MRR@10    | NDCG@10   | Recall@10 | Recall@50 | Recall@100 |
+|------------------|----------------------------------|-----------|-----------|-----------|-----------|------------|
+| Sparse retrieval | BM25-AM                          | 0.657     | 0.682     | 0.774     | 0.847     | 0.871      |
+| Dense retrieval  | RoBERTa-Base-Amharic-embed       | 0.755     | 0.808     | 0.913     | 0.964     | 0.979      |
+| Dense retrieval  | **ColBERT-RoBERTa-Base-Amharic** | **0.843↑** | **0.866↑** | **0.939↑** | **0.973↑** | 0.979      |
 
 ---
 
-> 📌 **Note:**
-> * RoBERTa-Base-Amharic-embed achieves statistically significant improvements over ColBERT-AM across all metrics. Evaluation was performed using a paired t-test.
-> * **For experiments on the 2AIRTC dataset**, please refer to the **Appendix section** of our [paper](#).
+> 📌 **Note**  
+> - ColBERT-RoBERTa-Base-Amharic significantly outperforms RoBERTa-Base-Amharic on **all ranking metrics**, except Recall@100, where both models converge. Significance assessed using a paired t-test.  
+> - For **additional experiments on the 2AIRTC dataset**, refer to the Appendix section of our [ACL 2025 Findings paper](#).
+
 ---
 
 ## 📄 Citation

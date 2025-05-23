@@ -26,8 +26,9 @@ share/python-wheels/
 *.egg
 MANIFEST
 test_scripts/
-
-
+notebooks/dotlineplot_colbert_amharic_models_swapped_axes.pdf
+notebooks/tokenizer_fertility_acl.pdf
+notebooks/dotlineplot_colbert_amharic_models.pdf
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -174,3 +175,5 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+notebooks/dotlineplot_colbert_amharic_models.pdf
+notebooks/tokenizer_fertility_acl.pdf

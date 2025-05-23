@@ -65,7 +65,7 @@ We use two publicly available Amharic datasets:
 
 | Dataset          | Description                         | Link                                                                                                                |
 | ---------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| **2AIRTC**       | Ad-hoc IR test collection           | [2IRIT Website](https://www.irit.fr/AmharicResources/airtc-the-amharic-adhoc-information-retrieval-test-collection/) |
+| **2AIRTC**       | Ad-hoc IR test collection           | [2AIRTC Website](https://www.irit.fr/AmharicResources/airtc-the-amharic-adhoc-information-retrieval-test-collection/) |
 | **Amharic News** | Headline–body classification corpus | [Hugging Face](https://huggingface.co/datasets/rasyosef/amharic-news-category-classification)                       |
 
 Scripts for downloading and preprocessing can be found in the `data/` folder.

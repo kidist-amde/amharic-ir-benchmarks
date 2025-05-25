@@ -30,8 +30,8 @@ amharic-ir-benchmarks/
 ├── baselines/             # BM25, ColBERT, and dense Amharic retrievers
 │   ├── bm25_retriever/
 │   ├── ColBERT_AM/
+│   ├── colbert-amharic-pylate/
 │   └── embedding_models/
-├── configs/               # Config files (training/evaluation)
 ├── data/                  # Scripts to download, preprocess, and prepare datasets
 ├── scripts/               # Shell scripts for training, indexing, evaluation
 ├── utils/                 # Utility functions

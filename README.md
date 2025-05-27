@@ -71,6 +71,11 @@ We use two publicly available Amharic datasets:
 Scripts for downloading and preprocessing can be found in the `data/` folder.
 
 ---
+## Models
+
+Our Amharic text embedding and ColBERT models can be found in the following Hugging Face [Collection](https://huggingface.co/collections/rasyosef/amharic-text-embedding-models-679cb55eae1d498e3ac5bdc5)
+
+---
 
 ##  Usage
 

@@ -1,6 +1,6 @@
 # Amharic-IR-Benchmarks
 
-[![ACL 2025 Findings](https://img.shields.io/badge/Paper-ACL%202025%20Findings-b31b1b)](https://aclanthology.org/)
+[![ACL 2025 Findings](https://img.shields.io/badge/Paper-ACL%202025%20Findings-b31b1b)](https://arxiv.org/abs/2505.19356)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-green.svg)](LICENSE)
 [![Models on HF](https://img.shields.io/badge/Models-HuggingFace-blueviolet)](https://huggingface.co/collections/rasyosef/amharic-text-embedding-models-679cb55eae1d498e3ac5bdc5)
 [![Dataset on HF](https://img.shields.io/badge/Dataset-HuggingFace-ff69b4)](https://huggingface.co/datasets/rasyosef/amharic-news-retrieval-dataset)
@@ -143,7 +143,7 @@ The table below presents a comparison between **sparse** and **dense** retrieval
 
 > 📌 **Note**  
 > - ColBERT-RoBERTa-Base-Amharic significantly outperforms RoBERTa-Base-Amharic on **all ranking metrics**, except Recall@100, where both models converge. Significance assessed using a paired t-test.  
-> - For **additional experiments on the 2AIRTC dataset**, refer to the Appendix section of our [ACL 2025 Findings paper](#).
+> - For **additional experiments on the 2AIRTC dataset**, refer to the Appendix section of our [ACL 2025 Findings paper](https://arxiv.org/abs/2505.19356).
 
 ---
 

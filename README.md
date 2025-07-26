@@ -152,11 +152,24 @@ The table below presents a comparison between **sparse** and **dense** retrieval
 If you use this repository, please cite our ACL 2025 Findings paper:
 
 ```bibtex
-@inproceedings{mekonnen2025amharic,
-  title={Optimized Text Embedding Models and Benchmarks for Amharic Passage Retrieval},
-  author={Kidist Amde Mekonnen, Yosef Worku Alemneh, Maarten de Rijke },
-  booktitle={Findings of ACL},
-  year={2025}
+@inproceedings{mekonnen-etal-2025-optimized,
+    title = "Optimized Text Embedding Models and Benchmarks for {A}mharic Passage Retrieval",
+    author = "Mekonnen, Kidist Amde  and
+      Alemneh, Yosef Worku  and
+      de Rijke, Maarten",
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-acl.543/",
+    pages = "10428--10445",
+    ISBN = "979-8-89176-256-5",
+    abstract = "Neural retrieval methods using transformer-based pre-trained language models have advanced multilingual and cross-lingual retrieval. However, their effectiveness for low-resource, morphologically rich languages such as Amharic remains underexplored due to data scarcity and suboptimal tokenization. We address this gap by introducing Amharic-specific dense retrieval models based on pre-trained Amharic BERT and RoBERTa backbones. Our proposed RoBERTa-Base-Amharic-Embed model (110M parameters) achieves a 17.6{\%} relative improvement in MRR@10 and a 9.86{\%} gain in Recall@10 over the strongest multilingual baseline, Arctic Embed 2.0 (568M parameters). More compact variants, such as RoBERTa-Medium-Amharic-Embed (42M), remain competitive while being over 13$\times$ smaller. Additionally, we train a ColBERT-based late interaction retrieval model that achieves the highest MRR@10 score (0.843) among all evaluated models. We benchmark our proposed models against both sparse and dense retrieval baselines to systematically assess retrieval effectiveness in Amharic. Our analysis highlights key challenges in low-resource settings and underscores the importance of language-specific adaptation. To foster future research in low-resource IR, we publicly release our dataset, codebase, and trained models at https://github.com/kidist-amde/amharic-ir-benchmarks."
 }
 ```
 
